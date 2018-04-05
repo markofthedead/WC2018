@@ -4,9 +4,16 @@
 @import 'colors';
 @import 'flags';
 
+html{
+  background: url(../img/bg01.jpg) top center;
+  background-size: contain;
+}
+
 body{
-  background:#222;
+  background: rgba(0,0,0,0.4);
   font-family: $primary-font;
+  background-image:
+  linear-gradient(90deg, transparent 49.9%, #ccc 49.9%, #ccc 50.1%, transparent 50.1% );
 }
 
 .content{
@@ -14,7 +21,11 @@ body{
 }
 
 header{
+  $highlight: lighten($dark-green, 3%);
   background-color: $dark-green ;
+  background-image:
+  linear-gradient(180deg, $highlight 58%, $dark-green 58%, $dark-green 98%, transparent 98%),
+  linear-gradient(180deg,transparent 98%, rgba(0,0,0,0.3) 98%, transparent 100%);
   height: 70px;
   display: grid;
   grid-template-columns: 1fr 420px 1fr;
@@ -26,7 +37,7 @@ header{
   }
 
   .middle-col{
-    $bg-color: darken($dark-green, 4%);
+    $bg-color: $light-green;
     color: $white;
     font-size: $large;
     font-weight: 900;
@@ -36,8 +47,10 @@ header{
     margin-top:10px;
     background-image:
 
-    linear-gradient(80deg,transparent 4%,$bg-color 4%, $bg-color 55%, transparent 55%),
-    linear-gradient(100deg,transparent 45%,$bg-color 45%,$bg-color 96%,transparent 96%);
+    linear-gradient(80deg,transparent 3%, rgba(0,0,0,0.3) 6%, transparent 6%),
+    linear-gradient(80deg,transparent 6%,$bg-color 6%, $bg-color 55%, transparent 55%),
+    linear-gradient(100deg,transparent 45%,$bg-color 45%,$bg-color 94%,transparent 94%),
+    linear-gradient(100deg,transparent 94%, rgba(0,0,0,0.3) 94%, transparent 96%);
 
     h1 {
       text-shadow: -1px 0 0 $black;
@@ -49,7 +62,7 @@ hr {display:none;}
 
 section{
   text-align:center;
-  margin: $triple-margin $single-margin;
+  margin: 35px $single-margin;
 
   .date-label{
     width:150px;
@@ -58,6 +71,9 @@ section{
     background:$black;
     color:$white;
     margin:auto;
+    font-weight:bold;
+    text-transform: uppercase;
+    border:1px solid #ccc;
 
     h2{
       display: grid;
@@ -77,12 +93,107 @@ section{
 
   }
 
-  .match{
-    background: rgba(255,255,255,0.1);
+  @media screen and (max-width: 1157px) {
+
+  }
+
+  @media screen and (max-width: 772px) {
+
+  }
+
+  @media screen and (min-width: 1158px) {
+    .match:not(:last-child) .article-content,
+    .story:not(:last-child) .article-content{ //needs updated per breakpoint
+
+      &::after{
+        content: '';
+        width:34px;
+        height:2px;
+        background:#ccc;
+        position: absolute;
+        right: -34px;
+        top: 50%;
+      }
+    }
+  }
+
+  .story{
     width:370px;
-    height:200px;
-    margin: $single-margin;
+    margin: $triple-margin $single-margin;
     display:inline-block;
+    vertical-align: middle;
+
+    &.noimg .article-content{
+      background-image:
+      linear-gradient(90deg, rgb(235, 141, 0) 14%, transparent 14%);
+      padding: 0 15px 0 65px;
+    }
+
+    .article-content{
+      // background-image:
+      // linear-gradient(90deg, rgb(235, 141, 0) 14%, transparent 14%);
+      padding: 0 15px 0 135px;
+      text-align: left;
+      position:relative;
+
+      .img-holder {
+        width:120px;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left:0;
+        overflow: hidden;
+
+        img{
+          max-height: 100%;
+        }
+      }
+
+      h3{
+        font-weight: 700;
+        font-size: 18px;
+        padding: $triple-margin 0;
+        a{
+          text-decoration: none;
+          color: $black;
+        }
+      }
+
+      p{
+        font-size: $small * 0.8;
+        line-height: 18px;
+        padding-bottom:20px;
+      }
+    }
+
+    .article-content{ //TODO: merge with match article-content
+      background:$white;
+      margin: 0 $double-margin;
+      position:relative;
+
+      .tags{
+        position:absolute;
+        bottom: -10px;
+        right: 10px;
+        li{
+          background:#333;
+          color: $white;
+          display: inline-block;
+          padding: 7px 10px;
+          font-weight: bold;
+          font-size: $small * 0.8;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .match{
+    // background: rgba(255,0,0,0.5);
+    width:370px;
+    margin: $triple-margin $single-margin;
+    display:inline-block;
+    vertical-align: middle;
 
     h3{
       height:44px;
@@ -128,6 +239,7 @@ section{
 
     .kickoff, .score {
       position:relative;
+      z-index: 1;
       background: $light-grey;
       height:36px;
       width: 80px;
@@ -153,7 +265,23 @@ section{
     .article-content{
       background:$white;
       margin: -1px $double-margin 0 $double-margin;
-      padding-top:1px;
+      padding-top: 6px;
+      height:150px;
+      position:relative;
+
+      .tags{
+        position:absolute;
+        bottom: -10px;
+        right: 10px;
+        li{
+          background:#333;
+          color: $white;
+          display: inline-block;
+          padding: 7px 10px;
+          font-weight: bold;
+          font-size: $small * 0.8;
+        }
+      }
     }
   }
 }
