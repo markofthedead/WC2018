@@ -1,0 +1,22 @@
+@mixin flag($country-code, $direction) {
+  background: url(../img/flags/#{$country-code}.png) no-repeat;
+  margin: $single-margin;
+  padding-#{$direction}:30px;
+  background-position: $direction center;
+  content:"#{to-upper-case($country-code)}";
+}
+
+section .match h3{
+
+  $countrylist:afg,alb,alg,asa,and,ang,aia,atg,arg,arm,aru,aus,aut,aze,bah,bhr,ban,brb,blr,bel,blz,ben,ber,bhu,bol,bih,bot,bra,vgb,bru,bul,bfa,bdi,cam,cmr,can,cpv,cay,cta,cha,chi,chn,tpe,col,com,cgo,cok,crc,cro,cub,cuw,cyp,cze,den,dji,dma,dom,cod,ecu,egy,slv,eng,eqg,eri,est,eth,fro,fij,fin,fra,gab,gam,geo,ger,gha,gib,gre,grn,gum,gua,gui,gnb,guy,hai,hon,hkg,hun,isl,ind,idn,irn,irq,isr,ita,civ,jam,jpn,jor,kaz,ken,kvx,kuw,kgz,lao,lva,lib,les,lbr,lby,lie,ltu,lux,mac,mkd,mad,mwi,mas,mdv,mli,mlt,mtn,mri,mex,mda,mng,mne,msr,mar,moz,mya,nam,nep,ned,ncl,nzl,nca,nig,nga,prk,nir,nor,oma,pak,ple,pan,png,par,per,phi,pol,por,pur,qat,irl,rou,rus,rwa,skn,lca,vin,sam,smr,stp,ksa,sco,sen,srb,sey,sle,sin,svk,svn,sol,som,rsa,kor,ssd,esp,sri,sdn,sur,swz,swe,sui,syr,tah,tjk,tan,tha,tls,tog,tga,tri,tun,tur,tkm,tca,uga,ukr,uae,usa,uru,vir,uzb,van,ven,vie,wal,yem,zam,zim;
+
+  @each $side in left right{
+    .#{$side}{
+      @each $country in $countrylist{
+        &.#{$country}:before{
+          @include flag("#{$country}", #{$side});
+        }
+      }
+    }
+  }
+}

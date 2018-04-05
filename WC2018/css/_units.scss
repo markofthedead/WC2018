@@ -1,0 +1,9 @@
+$small: 1em;
+$x-small: $small / 2;
+$medium: 1.5 * $small;
+$large: 2 * $small;
+$x-large: 3 * $small;
+
+$single-margin: 5px;
+$double-margin: $single-margin * 2;
+$triple-margin: $single-margin * 3;

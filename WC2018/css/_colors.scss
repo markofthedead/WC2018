@@ -1,0 +1,34 @@
+$white: #FFF;
+$black: #000;
+$grey: #CCC;
+$light-grey:#EEE;
+$dark-green: #006837;
+
+$logo-gradient-top: #FFFFFF;
+$logo-gradient-bottom: #E0FFEC;
+
+
+@mixin bg-color($color) {
+  background-color: $color;
+  background-image: linear-gradient(to bottom, lighten( $color, 6% ) 0, lighten( $color, 6% ) 50%, $color 50%, $color 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom,
+  color-stop(0, lighten( $color, 6% )),
+  color-stop(50%, lighten( $color, 6% )),
+  color-stop(50%, $color),
+  color-stop(100%, $color));
+}
+
+section .match h3{
+  .left, .right{
+    &.rus, &.spa{
+      @include bg-color(#bf2932);
+    }
+    &.ksa{
+      @include bg-color(#16ac48);
+    }
+    &.afg,&.alb,&.alg,&.asa,&.and,&.ang,&.aia,&.atg,&.arg,&.arm,&.aru,&.aus,&.aut,&.aze,&.bah,&.bhr,&.ban,&.brb,&.blr,&.bel,&.blz,&.ben,&.ber,&.bhu,&.bol,&.bih,&.bot,&.bra,&.vgb,&.bru,&.bul,&.bfa,&.bdi,&.cam,&.cmr,&.can,&.cpv,&.cay,&.cta,&.cha,&.chi,&.chn,&.tpe,&.col,&.com,&.cgo,&.cok,&.crc,&.cro,&.cub,&.cuw,&.cyp,&.cze,&.den,&.dji,&.dma,&.dom,&.cod,&.ecu,&.egy,&.slv,&.eng,&.eqg,&.eri,&.est,&.eth,&.fro,&.fij,&.fin,&.fra,&.gab,&.gam,&.geo,&.ger,&.gha,&.gib,&.gre,&.grn,&.gum,&.gua,&.gui,&.gnb,&.guy,&.hai,&.hon,&.hkg,&.hun,&.isl,&.ind,&.idn,&.irn,&.irq,&.isr,&.ita,&.civ,&.jam,&.jpn,&.jor,&.kaz,&.ken,&.kvx,&.kuw,&.kgz,&.lao,&.lva,&.lib,&.les,&.lbr,&.lby,&.lie,&.ltu,&.lux,&.mac,&.mkd,&.mad,&.mwi,&.mas,&.mdv,&.mli,&.mlt,&.mtn,&.mri,&.mex,&.mda,&.mng,&.mne,&.msr,&.mar,&.moz,&.mya,&.nam,&.nep,&.ned,&.ncl,&.nzl,&.nca,&.nig,&.nga,&.prk,&.nir,&.nor,&.oma,&.pak,&.ple,&.pan,&.png,&.par,&.per,&.phi,&.pol,&.por,&.pur,&.qat,&.irl,&.rou,&.rwa,&.skn,&.lca,&.vin,&.sam,&.smr,&.stp,&.sco,&.sen,&.srb,&.sey,&.sle,&.sin,&.svk,&.svn,&.sol,&.som,&.rsa,&.kor,&.ssd,&.esp,&.sri,&.sdn,&.sur,&.swz,&.swe,&.sui,&.syr,&.tah,&.tjk,&.tan,&.tha,&.tls,&.tog,&.tga,&.tri,&.tun,&.tur,&.tkm,&.tca,&.uga,&.ukr,&.uae,&.usa,&.uru,&.vir,&.uzb,&.van,&.ven,&.vie,&.wal,&.yem,&.zam,&.zim{
+      @include bg-color(#fc06ce);
+    }
+
+  }
+}
