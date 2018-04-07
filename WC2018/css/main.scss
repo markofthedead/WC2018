@@ -3,6 +3,7 @@
 @import 'typography';
 @import 'colors';
 @import 'flags';
+@import 'footer';
 
 html{
   background: url(../img/bg01.jpg) top center;
@@ -284,12 +285,4 @@ section{
       }
     }
   }
-}
-
-footer{
-  width:100%;
-  height:50px;
-  position: fixed;
-  bottom:0;
-  background-color: $dark-green ;
 }
