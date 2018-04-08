@@ -4,6 +4,7 @@ footer {
   height:60px;
   position: fixed;
   bottom:0;
+  z-index: 2;
 }
 
 .date-nav {
@@ -36,6 +37,12 @@ footer {
   font-weight: bold;
   text-transform: uppercase;
   font-size: $small * 0.7;
+
+  a{
+    text-decoration: none;
+    color: #fff;
+    display:block;
+  }
 
   span{
     display:block;
@@ -113,8 +120,11 @@ https://flickity.metafizzy.co
 }
 
 .flickity-button:hover {
-  background: #00ff47;
+  background: #ccc;
   cursor: pointer;
+  .flickity-button-icon {
+    fill: #333;
+  }
 }
 
 .flickity-button:focus {
