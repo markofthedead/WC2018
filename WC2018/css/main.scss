@@ -19,8 +19,10 @@ html{
 body{
   background: rgba(0,0,0,0.4);
   font-family: $primary-font;
+  &.home{
   background-image:
-  linear-gradient(90deg, transparent 49.9%, #ccc 49.9%, #ccc 50.1%, transparent 50.1% );
+    linear-gradient(90deg, transparent 49.9%, #ccc 49.9%, #ccc 50.1%, transparent 50.1% );
+  }
 }
 
 .content{
@@ -403,9 +405,196 @@ header{
 
 .story-page{
   article{
-    background:$white;
     text-align: left;
-    margin:100px;
-    padding:50px;
+    margin:50px 200px; //TODO: change per breakpoint
+
+    section{
+      background: $white;
+      padding:30px;
+    }
+
+    .story-box{
+      margin-bottom:50px;
+    }
+
+    .story-videos, .story-links{
+      h3{ //TODO: refactor common aspects of story boxes
+        font-size: $medium;
+        font-weight: bold;
+      }
+
+      img{
+        max-width: 120px;
+      }
+
+      ul li{
+        background:#eee;
+        padding:5px;
+        margin-top: 10px;
+
+        a{
+          display:grid;
+          grid-template-columns: 130px 1fr;
+          text-decoration: none;
+          color:#333;
+        }
+
+        img{
+          vertical-align: middle;
+        }
+        h4{
+          font-size: $small * 1.2;
+          font-weight:bold;
+          margin:10px 0;
+        }
+        h5{
+          color:#666;
+        }
+      }
+    }
+
+    .story-match{
+      margin-bottom:0;
+      display: grid;
+      grid-template-columns: 55% 45%;
+
+      div{
+        background:#eee;
+        h1{
+          font-size:$medium * 0.9;
+          font-weight: bold;
+          margin: 5px 0 2px 5px;
+        }
+        a{
+          margin: 0 0 0 5px;
+          font-size:$small * 0.9;
+        }
+      }
+
+      .match-details{
+        display: grid;
+        grid-template-columns: 40% 20% 45%;
+
+
+        li{
+          color:$white;
+          font-weight:bold;
+          padding:5px;
+          text-align: center;
+          font-size:$medium;
+        }
+
+        li:nth-child(1){
+          background:#333;
+          line-height: $medium;
+        }
+        li:nth-child(2){
+          background:#444;
+          font-weight:normal;
+          font-size:$small;
+          span{
+            font-size:$medium;
+            font-weight:bold;
+          }
+        }
+        li:nth-child(3){
+          background:#0071BC;
+          line-height: $medium;
+        }
+      }
+    }
+
+    .story-fixture{
+
+      padding-top:0;
+
+      h3{
+        font-size: $small * 1.2;
+        font-weight:bold;
+      }
+
+      p{
+        margin: 10px 0;
+        line-height: normal;
+      }
+    }
+
+    .story-tags{
+      background: none;
+      // position:absolute;
+      // bottom: -10px;
+      // right: 10px;
+      margin-top:-90px;
+      text-align:right;
+
+      li{
+        background:#333;
+        color: $white;
+        display: inline-block;
+        padding: 7px 10px;
+        font-weight: bold;
+        font-size: $small * 0.8;
+        text-transform: uppercase;
+      }
+    }
+
+    .story-watch{
+      padding: 5px;
+      display: grid;
+      grid-template-columns: 350px 1fr;
+      grid-gap: 5px;
+
+      .channel-picker{
+        background:#444;
+        color:$white;
+        padding:20px;
+        display: inline-block;
+        min-height:100px;
+
+        p{
+          margin:10px 0;
+        }
+
+        h3{
+          font-size: $large;
+          font-weight:bold;
+        }
+
+
+      }
+      > ul{
+        display:inline-block;
+        vertical-align: top;
+
+        li{
+
+          h4{
+            background:#555;
+            color: $white;
+            display:block;
+            font-weight: bold;
+            font-size: $small * 1.2;
+            padding:5px;
+          }
+          ul li{
+            background: #ddd;
+            padding:5px;
+            margin-top: 5px;
+            i{
+              display: inline-block;
+              width:30px;
+              height:20px;
+              vertical-align: middle;
+              margin-right:5px;
+              background: url(http://via.placeholder.com/30x20) left center no-repeat;
+            }
+          }
+        }
+      }
+
+      .hide{
+        display:none;
+      }
+    }
   }
 }
