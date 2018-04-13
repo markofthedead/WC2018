@@ -19,7 +19,7 @@ $logo-gradient-bottom: #E0FFEC;
   color-stop(100%, $color));
 }
 
-section .match h3{
+section .match h3, section .result h3{
   .left, .right{
 
     @include bg-color(#696969); //default color of all match banners
@@ -37,20 +37,23 @@ section .match h3{
   }
 }
 
-section .match .article-content .tags li, section .story .article-content .tags li{ //define post tag colors here
+section .match .article-content .tags li,
+section .result .article-content .tags li,
+section .story .article-content .tags li,
+.story-tags li{ //define post tag colors here
     &.rus, &.eng, &.egy, &.prt, &.esp{
-      background:#bf2932;
+      background:#bf2932; // RED
     }
     &.ksa{
-      background:#16ac48;
+      background:#16ac48; // GREEN
     }
     &.ury{
-      background:#07a1ab;
+      background:#07a1ab; // LIGHT BLUE
     }
     &.group{
-      background:#00a77a;
+      background:#00a77a; // TEAL
     }
     &.news{
-      background:#ffa100;
+      background:#ffa100; // ORANGE
     }
   }

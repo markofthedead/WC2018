@@ -1,8 +1,9 @@
 $small: 1em;
+$smaller: $small * 0.8;
 $x-small: $small / 2;
-$medium: 1.5 * $small;
-$large: 2 * $small;
-$x-large: 3 * $small;
+$medium: 1.2 * $small;
+$large: 1.5 * $small;
+$x-large: 2 * $small;
 
 $single-margin: 5px;
 $double-margin: $single-margin * 2;

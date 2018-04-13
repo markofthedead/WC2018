@@ -9,7 +9,7 @@ $countrylist:afg,alb,alg,asa,and,ang,aia,atg,arg,arm,aru,aus,aut,aze,bah,bhr,ban
   content:"#{to-upper-case($country-code)}";
 }
 
-section .match h3{
+section .match h3, section .result h3{
   @each $side in left right{
     .#{$side}{
       @each $country in $countrylist{
