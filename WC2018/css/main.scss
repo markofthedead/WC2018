@@ -250,8 +250,6 @@ header{
       }
 
       .article-content{
-        // background-image:
-        // linear-gradient(90deg, rgb(235, 141, 0) 14%, transparent 14%);
         padding: 0 15px 0 135px;
         text-align: left;
         position:relative;
@@ -288,6 +286,7 @@ header{
 
       .article-content{ //TODO: merge with match article-content
         background:$white;
+        box-shadow: 2px 2px #aaa;
         margin: 0 $double-margin;
         position:relative;
 
@@ -389,6 +388,7 @@ header{
 
       .article-content{
         background:$white;
+        box-shadow: 2px 2px #aaa;
         margin: -1px $double-margin 0 $double-margin;
         padding-top: 6px;
         height:150px;
