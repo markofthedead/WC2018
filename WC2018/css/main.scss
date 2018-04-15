@@ -587,7 +587,7 @@ header{
           font-size:$large;
         }
 
-        li:nth-child(1){
+        li:nth-child(1){ //TODO: move to breakpoint
           background:#333;
           line-height: $large;
         }
@@ -859,6 +859,12 @@ header{
 
     }
   }
+
+  .story-page{
+    article{
+      margin: 50px 100px;
+    }
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -941,5 +947,34 @@ header{
       }
     }
 
+  }
+
+  .story-page{
+    article{
+      margin: 50px;
+
+      .story-match{
+        display: block;
+        div{
+          padding:5px;
+        }
+        .match-details{
+          display: grid;
+          grid-template-columns: 40% 20% 40%;
+          li{
+            font-size:$small;
+          }
+          li:nth-child(2){
+            font-size:$smaller;
+            span{
+              font-size: $small;
+            }
+          }
+        }
+      }
+      .story-watch{
+        grid-template-columns: 100%;
+      }
+    }
   }
 }
