@@ -1,7 +1,7 @@
 $white: #FFF;
 $black: #000;
 $grey: #CCC;
-$light-grey:#EEE;
+$light-grey: #EEE;
 $dark-green: #006837;
 $light-green: #2e9855;
 
@@ -10,50 +10,68 @@ $logo-gradient-bottom: #E0FFEC;
 
 
 @mixin bg-color($color) {
-  background-color: $color;
-  background-image: linear-gradient(to bottom, lighten( $color, 6% ) 0, lighten( $color, 6% ) 50%, $color 50%, $color 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom,
-  color-stop(0, lighten( $color, 6% )),
-  color-stop(50%, lighten( $color, 6% )),
-  color-stop(50%, $color),
-  color-stop(100%, $color));
+    background-color: $color;
+    background-image: linear-gradient(to bottom, lighten( $color, 6% ) 0, lighten( $color, 6% ) 50%, $color 50%, $color 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, lighten( $color, 6% )), color-stop(50%, lighten( $color, 6% )), color-stop(50%, $color), color-stop(100%, $color));
 }
 
-section .match h3, section .result h3{
-  .left, .right{
+section .match h3, section .result h3 {
+    .left, .right {
 
-    @include bg-color(#696969); //default color of all match banners
+        @include bg-color(#696969); //default color of all match banners
+        &.rus, &.esp, &.egy, &.prt, &.mar, &.per, &.den, &.cro, &.cri, &.srb, &.swi, &.kor, &.pan, &.tun, &.eng, &.jpn, &.pol {
+            @include bg-color(#bf2932); //red teams
+        }
 
-    &.rus, &.esp, &.egy, &.prt, &.mar, &.irn, {
-      @include bg-color(#bf2932); //red teams
-    }
-    &.ksa{
-      @include bg-color(#16ac48); //green teams
-    }
-    &.ury{
-      @include bg-color(#07a1ab); //light blue teams
-    }
+        &.sau, &.irn, &.aus, &.nga, &.mex, &.bra, &.sen {
+            @include bg-color(#16ac48); //green teams
+        }
 
-  }
+        &.ury, &.arg {
+            @include bg-color(#68bbf2); //light blue teams
+        }
+
+        &.fra, &.isl, &.swe {
+            @include bg-color(#1036f2); //blue teams
+        }
+
+        &.col {
+            @include bg-color(#e2d816); //yellow teams
+        }
+    }
 }
 
 section .match .article-content .tags li,
 section .result .article-content .tags li,
 section .story .article-content .tags li,
-.story-tags li{ //define post tag colors here
-    &.rus, &.eng, &.egy, &.prt, &.esp{
-      background:#bf2932; // RED
+.story-tags li { //define post tag colors here
+                 background:#333;
+
+    &.rus, &.esp, &.egy, &.prt, &.mar, &.per, &.den, &.cro, &.cri, &.srb, &.swi, &.kor, &.pan, &.tun, &.eng, &.jpn, &.pol {
+        background: #bf2932; // RED
     }
-    &.ksa{
-      background:#16ac48; // GREEN
+
+    &.sau, &.irn, &.aus, &.nga, &.mex, &.bra, &.sen {
+        background: #16ac48; // GREEN
     }
-    &.ury{
-      background:#07a1ab; // LIGHT BLUE
+
+    &.ury, &.arg {
+        background: #68bbf2; // LIGHT BLUE
     }
-    &.group{
-      background:#00a77a; // TEAL
+
+    &.fra, &.isl, &.swe {
+        background: #1036f2; //blue teams
     }
-    &.news{
-      background:#ffa100; // ORANGE
+
+    &.col {
+        background: #e2d816; //yellow teams
     }
-  }
+
+    &.group {
+        background: #00a77a; // TEAL
+    }
+
+    &.news {
+        background: #ffa100; // ORANGE
+    }
+}
