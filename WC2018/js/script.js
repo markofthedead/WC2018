@@ -62,4 +62,16 @@ if (document.body.classList.contains('story')) {
    });
 }
 
+toggleMenu = () => {
+  const header = document.getElementsByTagName('header')[0];
+  header.classList.toggle("closed");
+}
+
+// document.getElementById("menuButton").addEventListener("click", toggleMenu());
+document.getElementById("menuButton").addEventListener("click", (e) => {
+  e.preventDefault();
+  toggleMenu();
+});
+
 changeWatchlist(readCookie("country"));
+toggleMenu();
