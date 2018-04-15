@@ -825,7 +825,7 @@ header{
           display: inline-block;
           width:20px;
           height: 20px;
-          background: darken($dark-green, 5%);
+          background: url(../img/globe.png);
           vertical-align: middle;
         }
       }
@@ -843,7 +843,7 @@ header{
           display: inline-block;
           width:20px;
           height: 20px;
-          background: darken($dark-green, 5%);
+          background: url(../img/shirt.png);
           vertical-align: middle;
         }
       }
@@ -974,6 +974,18 @@ header{
       }
       .story-watch{
         grid-template-columns: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header{
+    .middle-col{
+      width: 350px;
+      margin-top:0;
+      div{
+        background: none;
       }
     }
   }
