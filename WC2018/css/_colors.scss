@@ -2,12 +2,29 @@ $white: #FFF;
 $black: #000;
 $grey: #CCC;
 $light-grey:#EEE;
-$dark-green: #006837;
-$light-green: #2e9855;
+$primary-color: #006837;
+$secondary-color: #2e9855;
+$date-color-1: #ccc;
+$date-color-2: #000;
+
+$timeline-color: #ccc;
 
 $logo-gradient-top: #FFFFFF;
 $logo-gradient-bottom: #E0FFEC;
 
+$team-red: #bf2932;
+$team-green: #16ac48;
+$team-light-blue: #07a1ab;
+$team-yellow: #e2d816;
+$team-blue: #1036f2;
+$news-color: #eb8d00;
+$group-a-color: #00a77a;
+
+$red-teams:rus,esp,egy,prt,mar,irn,per,den,cro,cri,srb,swi,kor,pan,tun,eng,jpn,pol;
+$green-teams:ksa,sau,irn,aus,nga,mex,bra,sen;
+$light-blue-teams:ury,arg;
+$blue-teams:fra,isl,swe;
+$yellow-teams:col;
 
 @mixin bg-color($color) {
   background-color: $color;
@@ -24,36 +41,73 @@ section .match h3, section .result h3{
 
     @include bg-color(#696969); //default color of all match banners
 
-    &.rus, &.esp, &.egy, &.prt, &.mar, &.irn, {
-      @include bg-color(#bf2932); //red teams
+    &.red{ //TODO: loop all colors
+      @include bg-color($team-red); //red teams
+    }
+    @each $team in $red-teams{
+      &.#{$team}{
+        @extend .red;
+      }
     }
     &.ksa{
-      @include bg-color(#16ac48); //green teams
+      @include bg-color($team-green); //green teams
     }
     &.ury{
-      @include bg-color(#07a1ab); //light blue teams
+      @include bg-color($team-light-blue); //light blue teams
     }
 
   }
 }
 
+
 section .match .article-content .tags li,
 section .result .article-content .tags li,
 section .story .article-content .tags li,
 .story-tags li{ //define post tag colors here
-    &.rus, &.eng, &.egy, &.prt, &.esp{
-      background:#bf2932; // RED
+    &.red{
+      background:$team-red; // RED
     }
-    &.ksa{
-      background:#16ac48; // GREEN
+    &.green{
+      background:$team-green; // GREEN
     }
-    &.ury{
-      background:#07a1ab; // LIGHT BLUE
+    &.light-blue{
+      background:$team-light-blue; // LIGHT BLUE
+    }
+    &.yellow{
+      background:$team-yellow; // YELLOW
+    }
+    &.blue{
+      background:$team-blue; // BLUE
+    }
+    @each $team in $red-teams{ //TODO : mixin?
+      &.#{$team}{
+        @extend .red;
+      }
+    }
+    @each $team in $green-teams{
+      &.#{$team}{
+        @extend .green;
+      }
+    }
+    @each $team in $light-blue-teams{
+      &.#{$team}{
+        @extend .light-blue;
+      }
+    }
+    @each $team in $yellow-teams{
+      &.#{$team}{
+        @extend .yellow;
+      }
+    }
+    @each $team in $blue-teams{
+      &.#{$team}{
+        @extend .blue;
+      }
     }
     &.group{
-      background:#00a77a; // TEAL
+      background:$group-a-color; // TEAL
     }
     &.news{
-      background:#ffa100; // ORANGE
+      background:$news-color; // ORANGE
     }
   }

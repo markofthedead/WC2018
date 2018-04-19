@@ -11,11 +11,11 @@ html{
 }
 
 body{
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.4); // darken background - optional
   font-family: $primary-font;
   &.home{
   background-image:
-    linear-gradient(90deg, transparent 49.9%, #ccc 49.9%, #ccc 50.1%, transparent 50.1% );
+    linear-gradient(90deg, transparent 49.9%, $timeline-color 49.9%, $timeline-color 50.1%, transparent 50.1% ); //timeline line
   }
 }
 
@@ -24,10 +24,10 @@ body{
 }
 
 header{
-  $highlight: lighten($dark-green, 3%);
-  background-color: $dark-green ;
+  $highlight: lighten($primary-color, 3%);
+  background-color: $primary-color ;
   background-image:
-  linear-gradient(180deg, $highlight 58%, $dark-green 58%, $dark-green 98%, transparent 98%),
+  linear-gradient(180deg, $highlight 58%, $primary-color 58%, $primary-color 98%, transparent 98%),
   linear-gradient(180deg,transparent 98%, rgba(0,0,0,0.3) 98%, transparent 100%);
   height: 70px;
   display: grid;
@@ -53,7 +53,6 @@ header{
         vertical-align: middle;
         height:20px;
         width:25px;
-        background:#f00;
         &.eng{ //TODO: create MIXIN
           background: url(../img/flags/eng.png) left center no-repeat;
         }
@@ -71,8 +70,8 @@ header{
   }
 
   .middle-col{
-      $bg-color: $light-green;
-      $bg-color2: darken($light-green, 4%);
+      $bg-color: $secondary-color;
+      $bg-color2: darken($secondary-color, 4%);
       color: $white;
       font-size: $x-large;
       font-weight: 900;
@@ -86,7 +85,7 @@ header{
       height: 0;
       border: 15px solid rgba(0,0,0,0);
       border-bottom: 0 solid;
-      border-top: 80px solid $dark-green;
+      border-top: 80px solid $primary-color;
       -o-text-overflow: clip;
       text-overflow: clip;
 
@@ -121,12 +120,12 @@ header{
       width:150px;
       line-height:20px;
       text-align:left;
-      background:$black;
+      background:$date-color-2;
       color:$white;
       margin:auto;
       font-weight:bold;
       text-transform: uppercase;
-      border:1px solid #ccc;
+      border:1px solid $date-color-1;
 
       h2{
         display: grid;
@@ -163,7 +162,7 @@ header{
           content: '';
           width:34px;
           height:2px;
-          background:#ccc;
+          background:$timeline-color;
           position: absolute;
           right: -34px;
           top: 50%;
@@ -191,7 +190,7 @@ header{
         float:left;
         margin-left: -51px;
         margin-top: 12px;
-        border: 3px solid #fff;
+        border: 3px solid $white;
         background-image:
         linear-gradient(0deg,
         $white 13%, transparent 13%, transparent 23%, $white 23%,
@@ -343,7 +342,6 @@ header{
         }
 
         .right{
-          background-color: #0f0;
           border-left:none;
           text-align:right;
           &.winner::after{
@@ -442,10 +440,8 @@ header{
             padding: 10px 5px;
             background: #eee;
 
-            &.ury{
-              border:2px solid #07a1ab;
-              // border-left:none;
-              // border-right:none;
+            &.ury{ //TODO: loop teams list
+              border:2px solid $team-light-blue;
             }
           }
         }
@@ -481,12 +477,12 @@ header{
               border-right:3px solid #ddd;
 
             }
-            &.rus span{
-              border-color: #c21111;
+            &.rus span{ //TODO: loop teams list
+              border-color: $team-red;
             }
 
-            &.ury span{
-              border-color: #30d2c4;
+            &.ury span{ //TODO: loop teams list
+              border-color: $team-light-blue;
             }
           }
         }
@@ -498,7 +494,7 @@ header{
 .story-page{
   nav{
     padding: 10px;
-    background: lighten($dark-green, 4%);
+    background: lighten($primary-color, 4%);
 
     a{
       text-decoration: none;
@@ -851,8 +847,8 @@ header{
     .left-col, .right-col{
       div{
         select{
-          background: darken($dark-green, 4%);
-          border:1px solid darken($dark-green, 8%);
+          background: darken($primary-color, 4%);
+          border:1px solid darken($primary-color, 8%);
           color:#fff;
         }
       }
@@ -904,7 +900,7 @@ header{
     }
 
     .left-col , .right-col {
-      background: $dark-green;
+      background: $primary-color;
       div {
         text-align: left;
         label{
@@ -925,7 +921,7 @@ header{
       height: 0;
       border: 15px solid rgba(0,0,0,0);
       border-bottom: 0 solid;
-      border-top: 70px solid $dark-green;
+      border-top: 70px solid $primary-color;
       -o-text-overflow: clip;
       text-overflow: clip;
       margin: 0 auto;
@@ -938,7 +934,7 @@ header{
 
     .menu{
       display: block;
-      background: $dark-green;
+      background: $primary-color;
       a{
         font-size:$smaller;
         color:$white;
