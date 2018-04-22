@@ -153,10 +153,10 @@ header{
 
     }
 
-    @media screen and (min-width: 1158px) {
-      .match:not(:last-child) .article-content,
-      .result:not(:last-child) .article-content,
-      .story:not(:last-child) .article-content{ //needs updated per breakpoint
+    @media screen and (min-width: 789px) and (max-width: 1172px) {
+      .match:not(:last-child):not(:nth-child(3)):not(:nth-child(5)):not(:nth-child(7)):not(:nth-child(9)) .article-content,
+      .result:not(:last-child):not(:nth-child(3)):not(:nth-child(5)):not(:nth-child(7)):not(:nth-child(9)) .article-content,
+      .story:not(:last-child):not(:nth-child(3)):not(:nth-child(5)):not(:nth-child(7)):not(:nth-child(9)) .article-content{ //needs updated per breakpoint
 
         &::after{
           content: '';
@@ -169,6 +169,58 @@ header{
         }
       }
     }
+
+    @media screen and (min-width: 1173px) and (max-width: 1556px) {
+      .match:not(:last-child):not(:nth-child(4)):not(:nth-child(7)) .article-content,
+      .result:not(:last-child):not(:nth-child(4)):not(:nth-child(7)) .article-content,
+      .story:not(:last-child):not(:nth-child(4)):not(:nth-child(7)) .article-content{ //needs updated per breakpoint
+
+        &::after{
+          content: '';
+          width:34px;
+          height:2px;
+          background:$timeline-color;
+          position: absolute;
+          right: -34px;
+          top: 50%;
+        }
+      }
+    }
+
+
+    @media screen and (min-width: 1557px) and (max-width: 1940px) {
+      .match:not(:last-child):not(:nth-child(5)):not(:nth-child(9)) .article-content,
+      .result:not(:last-child):not(:nth-child(5)):not(:nth-child(9)) .article-content,
+      .story:not(:last-child):not(:nth-child(5)):not(:nth-child(9)) .article-content{
+
+        &::after{
+          content: '';
+          width:34px;
+          height:2px;
+          background:$timeline-color;
+          position: absolute;
+          right: -34px;
+          top: 50%;
+        }
+      }
+    }
+
+    // @media screen and (min-width: 1538px) {
+    //   .match:not(:nth-child(3)) .article-content,
+    //   .result:not(:nth-child(3)) .article-content,
+    //   .story:not(:nth-child(3)) .article-content{ //needs updated per breakpoint
+    //
+    //     &::after{
+    //       content: '';
+    //       width:34px;
+    //       height:2px;
+    //       background:$timeline-color;
+    //       position: absolute;
+    //       right: -34px;
+    //       top: 50%;
+    //     }
+    //   }
+    // }
 
     .story{
       width:370px;
@@ -986,3 +1038,5 @@ header{
     }
   }
 }
+
+@import 'ie';
