@@ -4,10 +4,34 @@ $carousel-color: $white;
 footer {
   box-sizing: border-box;
   width:100%;
-  height:60px;
+  height:85px;
   position: fixed;
-  bottom:0;
+  bottom: 0;
   z-index: 2;
+
+  .text-line{
+    height:25px;
+    font-size: $smaller;
+    background: darken($primary-color, 8%);
+    color: lighten($primary-color, 4%);
+    padding: 0 10px;
+    text-align: right;
+
+    a{
+      font-weight: bold;
+      color: lighten($primary-color, 8%);
+    }
+
+    p{
+      line-height: 25px;
+      &.left{
+        float:left;
+      }
+      &.right{
+        float:right;
+      }
+    }
+  }
 }
 
 .date-nav {
@@ -65,9 +89,34 @@ footer {
   }
 }
 
-.carousel-cell.is-selected {
+@media screen and (max-width: 768px) {
+  footer {
+    height: 110px;
 
+    .text-line{
+      height: 50px;
+      font-size:$x-small;
+      p{
+        &.left, &.right{
+          float:none;
+          text-align: center;
+        }
+      }
+    }
+  }
 }
+
+@media screen and (max-width: 450px) {
+  footer {
+    height: 135px;
+    .text-line{
+      height: 75px;
+    }
+  }
+}
+
+
+
 
 /*! Flickity v2.1.1
 https://flickity.metafizzy.co

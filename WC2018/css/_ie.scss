@@ -1,26 +1,11 @@
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   header{
 
-    width:100%; //IE-fix
-    display: table; //IE-fix
-
-
-    > div{
-      display:table-cell;
-    }
-
-    > div:nth-child(2), > div:nth-child(4){
-      width:25%;
-    }
-
-    > div:nth-child(3){
-      width:50%;
-    }
-
     .right-col, .left-col{
       div{
         select{
           background: $primary-color;
+          color: #fff;
         }
       }
     }
@@ -140,6 +125,26 @@
 }
 
 
+@media all and (-ms-high-contrast: none) and (min-width: 769px),
+(-ms-high-contrast: active) and (min-width: 769px) {
+  header{
+    width:100%; //IE-fix
+    display: table; //IE-fix
+
+
+    > div{
+      display:table-cell;
+    }
+
+    > div:nth-child(2), > div:nth-child(4){
+      width:25%;
+    }
+
+    > div:nth-child(3){
+      width:50%;
+    }
+  }
+}
 
 
 @media all and (-ms-high-contrast: none) and (max-width: 1024px),
@@ -180,17 +185,36 @@
     width:100%; //IE-fix
     display:block;; //IE-fix
 
-    > div{
+    > div {
       display:block;
       width:100%;
+    }
+
+
+    .right-col{
+      margin-top:-120px;
+    }
+
+    .middle-col{
+      margin-top:45px;
     }
 
     h1{
       background:none;
     }
 
+    div.menu{
+      position:absolute;
+      top:75px;
+      left:0;
+      width:80px;
+    }
+
     &.closed{ //TEMPORARY
-      margin-top:0px;
+
+      div.menu{
+        top:5px;
+      }
     }
   }
 

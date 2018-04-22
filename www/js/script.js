@@ -26,7 +26,8 @@ document.getElementById("countrySelect").addEventListener("change", function (e)
   const countryCode = e.target.value;
   const filter = document.getElementById('countryFilter').getElementsByTagName('i')[0];
   const oldClass = filter.classList.item(0);
-  filter.classList.replace(oldClass, countryCode);
+  filter.classList.remove(oldClass);
+  filter.classList.add(countryCode);
 });
 
 changeWatchlist = function (country) {

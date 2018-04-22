@@ -154,9 +154,9 @@ header{
     }
 
     @media screen and (min-width: 789px) and (max-width: 1172px) {
-      .match:not(:last-child):not(:nth-child(3)):not(:nth-child(5)):not(:nth-child(7)):not(:nth-child(9)) .article-content,
-      .result:not(:last-child):not(:nth-child(3)):not(:nth-child(5)):not(:nth-child(7)):not(:nth-child(9)) .article-content,
-      .story:not(:last-child):not(:nth-child(3)):not(:nth-child(5)):not(:nth-child(7)):not(:nth-child(9)) .article-content{ //needs updated per breakpoint
+      .match:not(:last-child):not(:nth-child(odd)) .article-content,
+      .result:not(:last-child):not(:nth-child(odd)) .article-content,
+      .story:not(:last-child):not(:nth-child(odd)) .article-content{ //needs updated per breakpoint
 
         &::after{
           content: '';
@@ -171,9 +171,9 @@ header{
     }
 
     @media screen and (min-width: 1173px) and (max-width: 1556px) {
-      .match:not(:last-child):not(:nth-child(4)):not(:nth-child(7)) .article-content,
-      .result:not(:last-child):not(:nth-child(4)):not(:nth-child(7)) .article-content,
-      .story:not(:last-child):not(:nth-child(4)):not(:nth-child(7)) .article-content{ //needs updated per breakpoint
+      .match:not(:last-child):not(:nth-child(4)):not(:nth-child(7)):not(:nth-child(10)) .article-content,
+      .result:not(:last-child):not(:nth-child(4)):not(:nth-child(7)):not(:nth-child(10)) .article-content,
+      .story:not(:last-child):not(:nth-child(4)):not(:nth-child(7)):not(:nth-child(10)) .article-content{ //TODO: change to extend
 
         &::after{
           content: '';
@@ -191,7 +191,7 @@ header{
     @media screen and (min-width: 1557px) and (max-width: 1940px) {
       .match:not(:last-child):not(:nth-child(5)):not(:nth-child(9)) .article-content,
       .result:not(:last-child):not(:nth-child(5)):not(:nth-child(9)) .article-content,
-      .story:not(:last-child):not(:nth-child(5)):not(:nth-child(9)) .article-content{
+      .story:not(:last-child):not(:nth-child(5)):not(:nth-child(9)) .article-content{ //TODO: change to extend
 
         &::after{
           content: '';
