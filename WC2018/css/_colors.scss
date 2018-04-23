@@ -64,6 +64,7 @@ section .match .article-content .tags li,
 section .result .article-content .tags li,
 section .story .article-content .tags li,
 .story-tags li{ //define post tag colors here
+    background:#ccc;
     &.red{
       background:$team-red; // RED
     }
