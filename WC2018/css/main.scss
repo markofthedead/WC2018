@@ -40,9 +40,9 @@ header{
   .left-col, .right-col{
     padding-top:10px;
 
-    // div label{
-    //   display:none;
-    // }
+    div label{
+      display:none;
+    }
   }
 
   .left-col{
@@ -55,22 +55,7 @@ header{
       }
 
       i{
-        display:inline-block;
-        vertical-align: middle;
-        height:20px;
-        width:25px;
-        &.eng{ //TODO: create MIXIN
-          background: url(../img/flags/eng.png) left center no-repeat;
-        }
-        &.rus{
-          background: url(../img/flags/rus.png) left center no-repeat;
-        }
-        &.ksa{
-          background: url(../img/flags/ksa.png) left center no-repeat;
-        }
-        &.any{
-          background: url(../img/flags/wc2018.png) left center no-repeat;
-        }
+        display:none;
       }
     }
   }
@@ -777,10 +762,19 @@ header{
             font-size: $medium;
             padding:5px;
           }
+          a{
+            background: $primary-color;
+            color: $white;
+            display:block;
+            font-weight: bold;
+            font-size: $medium;
+            padding:5px;
+            text-align: center;
+          }
           ul li{
             background: #ddd;
             padding:5px;
-            margin-top: 5px;
+            margin: 5px 0;
             i{
               display: inline-block;
               width:30px;
@@ -829,11 +823,7 @@ header{
     .right-col, .left-col{
       div{
         select{
-          background:none;
-          border:none;
-          color:#fff;
-          font-size: $small;
-          width: 200px;
+          width: 300px;
         }
       }
     }
@@ -847,8 +837,51 @@ header{
       div{
           text-align:center;
           margin: 18px 0 0 0;
+        select{
+          background: darken($primary-color, 4%);
+          border:1px solid darken($primary-color, 8%);
+          color:#fff;
+        }
       }
     }
+
+    .right-col{
+      .timezone-select{
+        label{
+          display:none;
+        }
+        select{
+          width:80%;
+        }
+        &::before{
+          content: '';
+          display: inline-block;
+          width:20px;
+          height: 20px;
+          background: url(../img/globe.png);
+          vertical-align: middle;
+        }
+      }
+    }
+    .left-col{
+      .country-filter{
+        label{
+          display:none;
+        }
+        select{
+          width:80%;
+        }
+        &::before{
+          content: '';
+          display: inline-block;
+          width:20px;
+          height: 20px;
+          background: url(../img/shirt.png);
+          vertical-align: middle;
+        }
+      }
+    }
+
     .middle-col{
       &::before{
         content: '';
@@ -871,52 +904,42 @@ header{
 
 @media screen and (min-width: 769px) and (max-width: 1157px) {
   header{
-    .right-col{
-      .timezone-select{
-        label{
-          display:none;
-        }
-        select{
-          width:85%;
-        }
-        &::before{
-          content: '';
-          display: inline-block;
-          width:20px;
-          height: 20px;
-          background: url(../img/globe.png);
-          vertical-align: middle;
-        }
-      }
-    }
-    .left-col{
-      .country-filter{
-        label{
-          display:none;
-        }
-        select{
-          width:65%;
-        }
-        &::before{
-          content: '';
-          display: inline-block;
-          width:20px;
-          height: 20px;
-          background: url(../img/shirt.png);
-          vertical-align: middle;
-        }
-      }
-    }
-    .left-col, .right-col{
-      div{
-        select{
-          background: darken($primary-color, 4%);
-          border:1px solid darken($primary-color, 8%);
-          color:#fff;
-        }
-      }
-
-    }
+    // .right-col{
+    //   .timezone-select{
+    //     label{
+    //       display:none;
+    //     }
+    //     select{
+    //       width:85%;
+    //     }
+    //     &::before{
+    //       content: '';
+    //       display: inline-block;
+    //       width:20px;
+    //       height: 20px;
+    //       background: url(../img/globe.png);
+    //       vertical-align: middle;
+    //     }
+    //   }
+    // }
+    // .left-col{
+    //   .country-filter{
+    //     label{
+    //       display:none;
+    //     }
+    //     select{
+    //       width:65%;
+    //     }
+    //     &::before{
+    //       content: '';
+    //       display: inline-block;
+    //       width:20px;
+    //       height: 20px;
+    //       background: url(../img/shirt.png);
+    //       vertical-align: middle;
+    //     }
+    //   }
+    // }
   }
 
   .story-page{
@@ -949,7 +972,7 @@ header{
     .left-col{
       padding-top:15px;
       div select{
-        width: 60%;
+        width: 64%;
       }
     }
 

@@ -13,13 +13,13 @@ footer {
     height:25px;
     font-size: $smaller;
     background: darken($primary-color, 8%);
-    color: lighten($primary-color, 4%);
+    color: #ccc;
     padding: 0 10px;
     text-align: right;
 
     a{
       font-weight: bold;
-      color: lighten($primary-color, 8%);
+      color: lighten($primary-color, 10%);
     }
 
     p{
