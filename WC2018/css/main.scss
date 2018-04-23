@@ -7,15 +7,17 @@
 
 html{
   background: url(../img/bg01.jpg) top center;
-  background-size: contain;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 body{
   background: rgba(0,0,0,0.4); // darken background - optional
   font-family: $primary-font;
   &.home{
-  background-image:
-    linear-gradient(90deg, transparent 49.9%, $timeline-color 49.9%, $timeline-color 50.1%, transparent 50.1% ); //timeline line
+  // background-image:
+  //   linear-gradient(90deg, transparent 49.9%, $timeline-color 49.9%, $timeline-color 50.1%, transparent 50.1% ); //timeline line
+  background: url(../img/timeline-back.gif) center repeat-y;
   }
 }
 
@@ -37,6 +39,10 @@ header{
 
   .left-col, .right-col{
     padding-top:10px;
+
+    // div label{
+    //   display:none;
+    // }
   }
 
   .left-col{
