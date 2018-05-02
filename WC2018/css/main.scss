@@ -578,7 +578,14 @@ header{
   }
 }
 
+.story{
+  .text-line{
+    margin-bottom:0;
+  }  
+}
+
 .story-page{
+
   nav{
     padding: 10px;
     background: lighten($primary-color, 4%);
