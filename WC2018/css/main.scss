@@ -581,7 +581,7 @@ header{
 .story{
   .text-line{
     margin-bottom:0;
-  }  
+  }
 }
 
 .story-page{
@@ -1153,3 +1153,7 @@ header{
 }
 
 @import 'ie';
+
+@-ms-viewport{
+  width: device-width;
+}

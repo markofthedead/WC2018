@@ -49,11 +49,37 @@ section .match h3, section .result h3{
         @extend .red;
       }
     }
-    &.ksa{
+    &.green{
       @include bg-color($team-green); //green teams
     }
-    &.ury{
+    @each $team in $green-teams{
+      &.#{$team}{
+        @extend .green;
+      }
+    }
+    &.light-blue{
       @include bg-color($team-light-blue); //light blue teams
+    }
+    @each $team in $light-blue-teams{
+      &.#{$team}{
+        @extend .light-blue;
+      }
+    }
+    &.blue{
+      @include bg-color($team-blue); //light blue teams
+    }
+    @each $team in $blue-teams{
+      &.#{$team}{
+        @extend .blue;
+      }
+    }
+    &.yellow{
+      @include bg-color($team-yellow); //light blue teams
+    }
+    @each $team in $yellow-teams{
+      &.#{$team}{
+        @extend .yellow;
+      }
     }
 
   }
@@ -85,7 +111,7 @@ section .story .article-content .tags li,
         @extend .red;
       }
     }
-    @each $team in $green-teams{
+    @each $team in $green-teams{ // extends the green class for every team in the grean-teams list above
       &.#{$team}{
         @extend .green;
       }
