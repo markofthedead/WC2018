@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <link rel="stylesheet" href="css/main.css" />
+  <title>title</title>
+</head>
+
+  <body class="story">
+    <form method="post" action="" id="form1">
+      <div id="wrapper">
+        <header class="">
+  <div class="menu">
+    <a href="" id="menuButton">Menu</a>
+  </div>
+  <div class="left-col">
+    <div id="countryFilter" class="country-filter">
+  <label for="">Filter:</label>
+  <i class="any"></i>
+  <select id="countrySelect">
+    <option value="any" class="any">Any</option>
+    <option value="eng" class="eng">England</option>
+    <option value="ksa" class="ksa">Saudi Arabia</option>
+    <option value="rus" class="rus">Russia</option>
+  </select>
+</div>
+
+  </div>
+  <div class="middle-col">
+    <div>
+      <h1><a href="/">WorldCup2018.com</a></h1>
+    </div>
+  </div>
+  <div class="right-col">
+    <div class="timezone-select">
+  <label for="ctl00$ContentPlaceHolder1$ddlTimezones">Your Timezone:</label>
+  <select name="ctl00$ContentPlaceHolder1$ddlTimezones" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ContentPlaceHolder1$ddlTimezones\&#39;,\&#39;\&#39;)&#39;, 0)" id="ContentPlaceHolder1_ddlTimezones">
+    <option value="Dateline Standard Time">(UTC-12:00) International Date Line West</option>
+    <option value="UTC-11">(UTC-11:00) Coordinated Universal Time-11</option>
+    <option value="Hawaiian Standard Time">(UTC-10:00) Hawaii</option>
+    <option value="Alaskan Standard Time">(UTC-09:00) Alaska</option>
+    <option value="Pacific Standard Time (Mexico)">(UTC-08:00) Baja California</option>
+    <option value="Pacific Standard Time">(UTC-08:00) Pacific Time (US &amp; Canada)</option>
+    <option value="US Mountain Standard Time">(UTC-07:00) Arizona</option>
+    <option value="Mountain Standard Time (Mexico)">(UTC-07:00) Chihuahua, La Paz, Mazatlan</option>
+    <option value="Mountain Standard Time">(UTC-07:00) Mountain Time (US &amp; Canada)</option>
+    <option value="Central America Standard Time">(UTC-06:00) Central America</option>
+    <option value="Central Standard Time">(UTC-06:00) Central Time (US &amp; Canada)</option>
+    <option value="Central Standard Time (Mexico)">(UTC-06:00) Guadalajara, Mexico City, Monterrey</option>
+    <option value="Canada Central Standard Time">(UTC-06:00) Saskatchewan</option>
+    <option value="SA Pacific Standard Time">(UTC-05:00) Bogota, Lima, Quito</option>
+    <option value="Eastern Standard Time">(UTC-05:00) Eastern Time (US &amp; Canada)</option>
+    <option value="US Eastern Standard Time">(UTC-05:00) Indiana (East)</option>
+    <option value="Venezuela Standard Time">(UTC-04:30) Caracas</option>
+    <option value="Paraguay Standard Time">(UTC-04:00) Asuncion</option>
+    <option value="Atlantic Standard Time">(UTC-04:00) Atlantic Time (Canada)</option>
+    <option value="Central Brazilian Standard Time">(UTC-04:00) Cuiaba</option>
+    <option value="SA Western Standard Time">(UTC-04:00) Georgetown, La Paz, Manaus, San Juan</option>
+    <option value="Pacific SA Standard Time">(UTC-04:00) Santiago</option>
+    <option value="Newfoundland Standard Time">(UTC-03:30) Newfoundland</option>
+    <option value="E. South America Standard Time">(UTC-03:00) Brasilia</option>
+    <option value="Argentina Standard Time">(UTC-03:00) Buenos Aires</option>
+    <option value="SA Eastern Standard Time">(UTC-03:00) Cayenne, Fortaleza</option>
+    <option value="Greenland Standard Time">(UTC-03:00) Greenland</option>
+    <option value="Montevideo Standard Time">(UTC-03:00) Montevideo</option>
+    <option value="Bahia Standard Time">(UTC-03:00) Salvador</option>
+    <option value="UTC-02">(UTC-02:00) Coordinated Universal Time-02</option>
+    <option value="Mid-Atlantic Standard Time">(UTC-02:00) Mid-Atlantic</option>
+    <option value="Azores Standard Time">(UTC-01:00) Azores</option>
+    <option value="Cape Verde Standard Time">(UTC-01:00) Cape Verde Is.</option>
+    <option value="Morocco Standard Time">(UTC) Casablanca</option>
+    <option value="UTC">(UTC) Coordinated Universal Time</option>
+    <option selected="selected" value="GMT Standard Time">(UTC) Dublin, Edinburgh, Lisbon, London</option>
+    <option value="Greenwich Standard Time">(UTC) Monrovia, Reykjavik</option>
+    <option value="W. Europe Standard Time">(UTC+01:00) Amsterdam, Berlin, Bern, Rome, Stockholm, Vienna</option>
+    <option value="Central Europe Standard Time">(UTC+01:00) Belgrade, Bratislava, Budapest, Ljubljana, Prague</option>
+    <option value="Romance Standard Time">(UTC+01:00) Brussels, Copenhagen, Madrid, Paris</option>
+    <option value="Central European Standard Time">(UTC+01:00) Sarajevo, Skopje, Warsaw, Zagreb</option>
+    <option value="W. Central Africa Standard Time">(UTC+01:00) West Central Africa</option>
+    <option value="Namibia Standard Time">(UTC+01:00) Windhoek</option>
+    <option value="GTB Standard Time">(UTC+02:00) Athens, Bucharest</option>
+    <option value="Middle East Standard Time">(UTC+02:00) Beirut</option>
+    <option value="Egypt Standard Time">(UTC+02:00) Cairo</option>
+    <option value="Syria Standard Time">(UTC+02:00) Damascus</option>
+    <option value="E. Europe Standard Time">(UTC+02:00) E. Europe</option>
+    <option value="South Africa Standard Time">(UTC+02:00) Harare, Pretoria</option>
+    <option value="FLE Standard Time">(UTC+02:00) Helsinki, Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
+    <option value="Turkey Standard Time">(UTC+02:00) Istanbul</option>
+    <option value="Israel Standard Time">(UTC+02:00) Jerusalem</option>
+    <option value="Jordan Standard Time">(UTC+03:00) Amman</option>
+    <option value="Arabic Standard Time">(UTC+03:00) Baghdad</option>
+    <option value="Kaliningrad Standard Time">(UTC+03:00) Kaliningrad, Minsk</option>
+    <option value="Arab Standard Time">(UTC+03:00) Kuwait, Riyadh</option>
+    <option value="E. Africa Standard Time">(UTC+03:00) Nairobi</option>
+    <option value="Iran Standard Time">(UTC+03:30) Tehran</option>
+    <option value="Arabian Standard Time">(UTC+04:00) Abu Dhabi, Muscat</option>
+    <option value="Azerbaijan Standard Time">(UTC+04:00) Baku</option>
+    <option value="Russian Standard Time">(UTC+04:00) Moscow, St. Petersburg, Volgograd</option>
+    <option value="Mauritius Standard Time">(UTC+04:00) Port Louis</option>
+    <option value="Georgian Standard Time">(UTC+04:00) Tbilisi</option>
+    <option value="Caucasus Standard Time">(UTC+04:00) Yerevan</option>
+    <option value="Afghanistan Standard Time">(UTC+04:30) Kabul</option>
+    <option value="Pakistan Standard Time">(UTC+05:00) Islamabad, Karachi</option>
+    <option value="West Asia Standard Time">(UTC+05:00) Tashkent</option>
+    <option value="India Standard Time">(UTC+05:30) Chennai, Kolkata, Mumbai, New Delhi</option>
+    <option value="Sri Lanka Standard Time">(UTC+05:30) Sri Jayawardenepura</option>
+    <option value="Nepal Standard Time">(UTC+05:45) Kathmandu</option>
+    <option value="Central Asia Standard Time">(UTC+06:00) Astana</option>
+    <option value="Bangladesh Standard Time">(UTC+06:00) Dhaka</option>
+    <option value="Ekaterinburg Standard Time">(UTC+06:00) Ekaterinburg</option>
+    <option value="Myanmar Standard Time">(UTC+06:30) Yangon (Rangoon)</option>
+    <option value="SE Asia Standard Time">(UTC+07:00) Bangkok, Hanoi, Jakarta</option>
+    <option value="N. Central Asia Standard Time">(UTC+07:00) Novosibirsk</option>
+    <option value="China Standard Time">(UTC+08:00) Beijing, Chongqing, Hong Kong, Urumqi</option>
+    <option value="North Asia Standard Time">(UTC+08:00) Krasnoyarsk</option>
+    <option value="Singapore Standard Time">(UTC+08:00) Kuala Lumpur, Singapore</option>
+    <option value="W. Australia Standard Time">(UTC+08:00) Perth</option>
+    <option value="Taipei Standard Time">(UTC+08:00) Taipei</option>
+    <option value="Ulaanbaatar Standard Time">(UTC+08:00) Ulaanbaatar</option>
+    <option value="North Asia East Standard Time">(UTC+09:00) Irkutsk</option>
+    <option value="Tokyo Standard Time">(UTC+09:00) Osaka, Sapporo, Tokyo</option>
+    <option value="Korea Standard Time">(UTC+09:00) Seoul</option>
+    <option value="Cen. Australia Standard Time">(UTC+09:30) Adelaide</option>
+    <option value="AUS Central Standard Time">(UTC+09:30) Darwin</option>
+    <option value="E. Australia Standard Time">(UTC+10:00) Brisbane</option>
+    <option value="AUS Eastern Standard Time">(UTC+10:00) Canberra, Melbourne, Sydney</option>
+    <option value="West Pacific Standard Time">(UTC+10:00) Guam, Port Moresby</option>
+    <option value="Tasmania Standard Time">(UTC+10:00) Hobart</option>
+    <option value="Yakutsk Standard Time">(UTC+10:00) Yakutsk</option>
+    <option value="Central Pacific Standard Time">(UTC+11:00) Solomon Is., New Caledonia</option>
+    <option value="Vladivostok Standard Time">(UTC+11:00) Vladivostok</option>
+    <option value="New Zealand Standard Time">(UTC+12:00) Auckland, Wellington</option>
+    <option value="UTC+12">(UTC+12:00) Coordinated Universal Time+12</option>
+    <option value="Fiji Standard Time">(UTC+12:00) Fiji</option>
+    <option value="Magadan Standard Time">(UTC+12:00) Magadan</option>
+    <option value="Kamchatka Standard Time">(UTC+12:00) Petropavlovsk-Kamchatsky - Old</option>
+    <option value="Tonga Standard Time">(UTC+13:00) Nuku&#39;alofa</option>
+    <option value="Samoa Standard Time">(UTC+13:00) Samoa</option>
+  </select>
+</div>
+
+  </div>
+</header>
+
+        <div class="content story-page">
+          <article id="ContentPlaceHolder1_article">
+  <nav>
+      <a href="/">« WorldCup2018.com</a>
+  </nav>
+
+
+
+  <!--MATCH: START-->
+  <section class="story-match story-box">
+      <div>
+        <h1 title="Match">Russia vs Saudi Arabia</h1>
+        <a class="location" href="http://stadiumdb.com/tournaments/world_cup/2018/luzhniki_stadium" target="_blank">Luzhniki Stadium</a>
+      </div>
+      <ul class="match-details">
+        <li>Thu, 14 Jun</li>
+        <li><span>16:00</span> +01:00</li>
+        <li>Group A</li>
+      </ul>
+  </section>
+
+
+  <!--FIXTURE: START-->
+  <section class="story-fixture story-box">
+      <div class="hero-img clip-400">
+        <img src="http://via.placeholder.com/1024x800" alt="Alt Text">
+      </div>
+      <p class="story-result"><span>Russia</span> <span class="score">0 - 0</span> <span>Saudia Arabia</span></p>
+      <h3>Preview</h3>
+      <p>Host nation Russia take on Saudi Arabia in the opening match of the 2018 FIFA World Cup at the Luzhniki Stadium in Moscow.</p>
+<p>The sides have only met once before, with the Saudis winning a 4-2 friendly encounter in October 1993.&nbsp;</p>
+<p>The FIFA World Cup will get underway in the Russian capital with the tournament hosts coming up against an unfancied Saudi Arabia.</p>
+<p>The Green Falcons will be playing in their first World Cup match in 12 years while they have only progressed past the group stages once – in 1994, when they were eliminated at the last 16 stage.</p>
+<p>This will be Russia’s fourth World Cup since the break up of the Soviet Union yet have failed to progress past the groups in each of their previous attempts, including last time out in Brazil.</p>
+<p>Stanislav Cherchesov’s side will be strong favourites for this encounter and will believe they must get off to a winning start if they are to qualify from a group which includes Egypt and Uruguay.</p>
+  </section>
+
+  <!--TEAMS: START-->
+  <section id="teams" title="Tags" class="story-tags">
+      <ul>
+      <li class="rus">
+          <a href="/Russia">RUS</a>
+      </li>
+      <li class="ksa">
+          <a href="/Saudi-Arabia">KSA</a>
+      </li>
+      </ul>
+  </section>
+  <!--TEAMS: END-->
+
+  <section  class="story-watch story-box">
+      <div class="channel-picker">
+        <h3>Where to Watch Live</h3>
+      </div>
+      <ul id="channelList">
+          <li>
+              <h4>United Kingdom</h4>
+              <ul>
+                  <li><i></i>
+                      ITV 1 UK
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>United States</h4>
+              <ul>
+                  <li class="fox-match"><i></i>
+                      FOX Soccer Match Pass
+                  </li>
+                  <li class="fox"><i></i>
+                      FOX Network
+                  </li>
+                  <li class="fox-go"><i></i>
+                      FOX Sports GO
+                  </li>
+                  <li class="tele-vivo"><i></i>
+                      Telemundo Deportes En Vivo
+                  </li>
+                  <li class="tele"><i></i>
+                      Telemundo
+                  </li>
+                  <li class="fubo"><i></i>
+                      fuboTV
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Algeria</h4>
+              <ul>
+                  <li><i></i>
+                      beIN SPORTS CONNECT
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Argentina</h4>
+              <ul>
+                  <li><i></i>
+                      DIRECTV Sports Argentina
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Australia</h4>
+              <ul>
+                  <li><i></i>
+                      SBS Live
+                  </li>
+                  <li><i></i>
+                      Optus Sport
+                  </li>
+                  <li><i></i>
+                      SBS
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Chile</h4>
+              <ul>
+                  <li><i></i>
+                      DIRECTV Sports Chile
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>China</h4>
+              <ul>
+                  <li><i></i>
+                      CCTV 5+ VIP
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Colombia</h4>
+              <ul>
+                  <li><i></i>
+                      DIRECTV Sports Colombia
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Costa Rica</h4>
+              <ul>
+                  <li><i></i>
+                      Sky HD
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Dominican Republic</h4>
+              <ul>
+                  <li><i></i>
+                      Sky HD
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Ecuador</h4>
+              <ul>
+                  <li><i></i>
+                      DIRECTV Sports Ecuador
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Egypt</h4>
+              <ul>
+                  <li><i></i>
+                      beIN SPORTS CONNECT
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>El Salvador</h4>
+              <ul>
+                  <li><i></i>
+                      Sky HD
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Guatemala</h4>
+              <ul>
+                  <li><i></i>
+                      Sky HD
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Honduras</h4>
+              <ul>
+                  <li><i></i>
+                      Sky HD
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>India</h4>
+              <ul>
+                  <li><i></i>
+                      Sony LIV
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Iran</h4>
+              <ul>
+                  <li><i></i>
+                      beIN SPORTS CONNECT
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Iraq</h4>
+              <ul>
+                  <li><i></i>
+                      beIN SPORTS CONNECT
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Ireland</h4>
+              <ul>
+                  <li><i></i>
+                      ITV 1 UK
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Jordan</h4>
+              <ul>
+                  <li><i></i>
+                      beIN SPORTS CONNECT
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Kuwait</h4>
+              <ul>
+                  <li><i></i>
+                      beIN SPORTS CONNECT
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Lebanon</h4>
+              <ul>
+                  <li><i></i>
+                      beIN SPORTS CONNECT
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Libya</h4>
+              <ul>
+                  <li><i></i>
+                      beIN SPORTS CONNECT
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Mexico</h4>
+              <ul>
+                  <li><i></i>
+                      Blue To Go Video Everywhere
+                  </li>
+                  <li><i></i>
+                      Sky HD
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Morocco</h4>
+              <ul>
+                  <li><i></i>
+                      beIN SPORTS CONNECT
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Oman</h4>
+              <ul>
+                  <li><i></i>
+                      beIN SPORTS CONNECT
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Pakistan</h4>
+              <ul>
+                  <li><i></i>
+                      Sony LIV
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Panama</h4>
+              <ul>
+                  <li><i></i>
+                      Sky HD
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Peru</h4>
+              <ul>
+                  <li><i></i>
+                      DIRECTV Sports Peru
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Qatar</h4>
+              <ul>
+                  <li><i></i>
+                      beIN SPORTS CONNECT
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Saudi Arabia</h4>
+              <ul>
+                  <li>
+                      beIN SPORTS CONNECT
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Tunisia</h4>
+              <ul>
+                  <li>
+                      beIN SPORTS CONNECT
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>United Arab Emirates</h4>
+              <ul>
+                  <li>
+                      beIN SPORTS CONNECT
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Uruguay</h4>
+              <ul>
+                  <li>
+                      DIRECTV Sports Uruguay
+                  </li>
+              </ul>
+          </li>
+          <li>
+              <h4>Venezuela</h4>
+              <ul>
+                  <li>
+                      DIRECTV Sports Venezuela
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="">See More</a>
+          </li>
+      </ul>
+  </section>
+  <!--FIXTURE: END-->
+
+  <!--MATCH: END-->
+
+  <!--VIDEOS: START-->
+  <section id="videos"  class="story-videos story-box">
+      <h3>Videos</h3>
+      <ul>
+        <li>
+          <a href="https://www.youtube.com/watch?v=fTYgpGdvFa4" target="_blank">
+            <div>
+              <img src="https://i.ytimg.com/vi/fTYgpGdvFa4/default.jpg">
+            </div>
+            <div>
+              <h4>FIFA World Cup Russia 2018 (Official Video)</h4>
+              <h5>YouTube</h5>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=fTYgpGdvFa4" target="_blank">
+            <div>
+              <img src="https://i.ytimg.com/vi/fTYgpGdvFa4/default.jpg">
+            </div>
+            <div>
+              <h4>FIFA World Cup Russia 2018</h4>
+              <h5>YouTube</h5>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/watch?v=fTYgpGdvFa4" target="_blank">
+            <div>
+              <img src="https://i.ytimg.com/vi/fTYgpGdvFa4/default.jpg">
+            </div>
+            <div>
+              <h4>FIFA World Cup (Official Video)</h4>
+              <h5>YouTube</h5>
+            </div>
+          </a>
+        </li>
+      </ul>
+  </section>
+  <!--VIDEOS: END-->
+
+  <!--LINKS: START-->
+  <section id="links" class="story-links story-box">
+      <h3>Articles</h3>
+      <ul>
+        <li>
+          <a href="http://www.fifa.com/worldcup/matches/round=275073/match=300331503/your11/index.html" target="_blank">
+            <div>
+                <img src="http://img.fifa.com/images/fwc/2018/opengraph/generic.png">
+            </div>
+            <div>
+                    <h4>2018 FIFA World Cup Russia™    - Matches - Russia-Saudi Arabia - FIFA.com</h4>
+                <h5>FIFA.com</h5>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.fifa.com/worldcup/matches/round=275073/match=300331503/your11/index.html" target="_blank">
+            <div>
+                <img src="http://img.fifa.com/images/fwc/2018/opengraph/generic.png">
+            </div>
+            <div>
+                    <h4>2018 FIFA World Cup Russia™    - Matches - Russia-Saudi Arabia - FIFA.com</h4>
+                <h5>FIFA.com</h5>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="http://www.fifa.com/worldcup/matches/round=275073/match=300331503/your11/index.html" target="_blank">
+            <div>
+                <img src="http://img.fifa.com/images/fwc/2018/opengraph/generic.png">
+            </div>
+            <div>
+                    <h4>2018 FIFA World Cup Russia™    - Matches - Russia-Saudi Arabia - FIFA.com</h4>
+                <h5>FIFA.com</h5>
+            </div>
+          </a>
+        </li>
+      </ul>
+  </section>
+  <!--LINKS: END-->
+
+  <!--RELATED MATCHES: START-->
+
+  <section id="related-matches" class="story-related story-box">
+      <h3>Related Matches</h3>
+      <ul>
+          <li>
+              <a href="/2018/06/19/Russia-vs-Egypt/146">Russia vs Egypt</a> <span>Tue, 19 Jun 18:00 +01:00</span>
+          </li>
+          <li>
+              <a href="/2018/06/20/Uruguay-vs-Saudi-Arabia/148">Uruguay vs Saudi Arabia</a> <span>Wed, 20 Jun 15:00 +01:00</span>
+          </li>
+          <li>
+              <a href="/2018/06/25/Uruguay-vs-Russia/162">Uruguay vs Russia</a> <span>Mon, 25 Jun 14:00 +01:00</span>
+          </li>
+          <li>
+              <a href="/2018/06/25/Saudi-Arabia-vs-Egypt/163">Saudi Arabia vs Egypt</a> <span>Mon, 25 Jun 14:00 +01:00</span>
+          </li>
+      </ul>
+  </section>
+
+  <!--RELATED MATCHES: END-->
+
+  <nav>
+      <a href="/Default.aspx">« WorldCup2018.com</a>
+  </nav>
+</article>
+
+        </div>
+      </div>
+      <div class="text-line">
+        <p>Copyright &copy; 2018 <a href="">[Scott/Dashboard?]</a> </p>
+        <p>Photo by Peters, Hans / Anefo (<a href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a>)</p>
+        <p> Web design by <a href="http://hardcandydesign.com/">hardcandydesign.com</a></p>
+      </div>
+    </form>
+    <script src="js/flickity/flickity.pkgd.min.js"></script>
+<script src="js/script.js"></script>
+
+  </body>
+</html>

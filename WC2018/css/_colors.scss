@@ -106,7 +106,7 @@ section .story .article-content .tags li,
     &.blue{
       background:$team-blue; // BLUE
     }
-    @each $team in $red-teams{ //TODO : mixin?
+    @each $team in $red-teams{
       &.#{$team}{
         @extend .red;
       }
@@ -136,5 +136,53 @@ section .story .article-content .tags li,
     }
     &.news{
       background:$news-color; // ORANGE
+    }
+  }
+
+.home{
+  section{
+  .match, .result{
+    .article-content{
+      .goals{
+        li{
+          @each $team in $red-teams{
+            &.#{$team}{
+              span{
+               border-color:$team-red;
+              }
+            }
+          }
+          @each $team in $light-blue-teams{
+            &.#{$team}{
+              span{
+               border-color:$team-light-blue;
+              }
+            }
+          }
+          @each $team in $green-teams{
+            &.#{$team}{
+              span{
+               border-color:$team-green;
+              }
+            }
+          }
+          @each $team in $blue-teams{
+            &.#{$team}{
+              span{
+               border-color:$team-blue;
+              }
+            }
+          }
+          @each $team in $yellow-teams{
+            &.#{$team}{
+              span{
+               border-color:$team-yellow;
+              }
+            }
+          }
+        }
+      }
+      }
+      }
     }
   }
