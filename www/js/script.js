@@ -39,3 +39,7 @@ if(isIE){
 if(isSafari){
   document.getElementsByTagName("BODY")[0].className += " safari";
 }
+
+if(isChrome){
+  document.getElementsByTagName("BODY")[0].className += " chrome";
+}

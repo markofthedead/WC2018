@@ -61,84 +61,191 @@ body{
   padding-bottom:150px;
 }
 
+// header{
+//   $highlight: lighten($primary-color, 3%);
+//   background-color: $primary-color ;
+//   background-image:
+//   linear-gradient(180deg, $highlight 58%, $primary-color 58%, $primary-color 98%, transparent 98%),
+//   linear-gradient(180deg,transparent 98%, rgba(0,0,0,0.3) 98%, transparent 100%);
+//   height: 70px;
+//   display: grid;
+//   grid-template-columns: 1fr 420px 1fr;
+//   margin-top:-10px;
+//   margin-bottom:40px;
+//
+//   .left-col, .right-col{
+//     padding-top:10px;
+//
+//     div label{
+//       display:none;
+//     }
+//   }
+//
+//   .left-col{
+//   text-align: center;
+//
+//     .country-filter{
+//
+//       label{
+//         color:$white;
+//       }
+//
+//       i{
+//         display:none;
+//       }
+//     }
+//   }
+//
+//   .middle-col{
+//       $bg-color: $secondary-color;
+//       $bg-color2: darken($secondary-color, 4%);
+//       color: $white;
+//       font-size: $x-large;
+//       font-weight: 900;
+//       text-transform: uppercase;
+//       text-align: center;
+//       line-height: 70px;
+//       -webkit-box-sizing: content-box;
+//       -moz-box-sizing: content-box;
+//       box-sizing: content-box;
+//       width: 390px;
+//       height: 0;
+//       border: 15px solid rgba(0,0,0,0);
+//       border-bottom: 0 solid;
+//       border-top: 80px solid $primary-color;
+//       -o-text-overflow: clip;
+//       text-overflow: clip;
+//
+//       div{
+//         margin: -70px -15px 0 -15px;
+//         background: url(../img/logo_back.png) top center no-repeat;
+//         h1 {
+//           text-shadow: -1px 0 0 $black;
+//           position: relative;
+//           a{
+//             text-decoration: none;
+//             color: #fff;
+//           }
+//         }
+//       }
+//   }
+//
+//   .right-col{
+//
+//     .timezone-select{
+//       label{
+//         color:$white;
+//       }
+//     }
+//   }
+// }
+
 header{
-  $highlight: lighten($primary-color, 3%);
-  background-color: $primary-color ;
-  background-image:
-  linear-gradient(180deg, $highlight 58%, $primary-color 58%, $primary-color 98%, transparent 98%),
-  linear-gradient(180deg,transparent 98%, rgba(0,0,0,0.3) 98%, transparent 100%);
-  height: 70px;
-  display: grid;
-  grid-template-columns: 1fr 420px 1fr;
-  margin-top:-10px;
-  margin-bottom:40px;
-
-  .left-col, .right-col{
-    padding-top:10px;
-
-    div label{
-      display:none;
-    }
-  }
-
-  .left-col{
+  height:70px;
+  background: url(../img/navbarback.png) repeat-x;
   text-align: center;
 
-    .country-filter{
+  h1 a{
+    display: inline-block;
+    margin:auto;
+    width:445px;
+    height:70px;
+    background: url(../img/logo.png) no-repeat;
+    overflow: hidden;
+    text-indent: -98989px;
+  }
 
-      label{
-        color:$white;
-      }
+  .header-content{
+    margin-top:-50px;
+  }
 
-      i{
-        display:none;
-      }
+  .timezone-select{
+    display:inline-block;
+    margin-left:450px;
+    label{
+      display:none;
+    }
+    select{
+      width:300px;
+    }
+    &::before{
+      content: '';
+      display: inline-block;
+      width:20px;
+      height: 20px;
+      background: url(../img/globe.png);
+      vertical-align: middle;
     }
   }
 
-  .middle-col{
-      $bg-color: $secondary-color;
-      $bg-color2: darken($secondary-color, 4%);
-      color: $white;
-      font-size: $x-large;
-      font-weight: 900;
-      text-transform: uppercase;
-      text-align: center;
-      line-height: 70px;
-      -webkit-box-sizing: content-box;
-      -moz-box-sizing: content-box;
-      box-sizing: content-box;
-      width: 390px;
-      height: 0;
-      border: 15px solid rgba(0,0,0,0);
-      border-bottom: 0 solid;
-      border-top: 80px solid $primary-color;
-      -o-text-overflow: clip;
-      text-overflow: clip;
-
-      div{
-        margin: -70px -15px 0 -15px;
-        background: url(../img/logo_back.png) top center no-repeat;
-        h1 {
-          text-shadow: -1px 0 0 $black;
-          position: relative;
-          a{
-            text-decoration: none;
-            color: #fff;
-          }
-        }
-      }
+  .country-filter{
+    display:inline-block;
+    label{
+      display:none;
+    }
+    select{
+      width:300px;
+    }
+    &::before{
+      content: '';
+      display: inline-block;
+      width:20px;
+      height: 20px;
+      background: url(../img/shirt.png);
+      vertical-align: middle;
+    }
   }
+}
 
-  .right-col{
-
-    .timezone-select{
-      label{
-        color:$white;
+@media screen and (max-width: 1110px) {
+  header{
+    .timezone-select, .country-filter{
+      select{
+        width:200px;
       }
     }
   }
 }
+
+@media screen and (max-width: 910px) {
+  header{
+    .timezone-select, .country-filter{
+
+    }
+    .timezone-select{
+      margin-left:280px;
+    }
+    h1 a{
+      width: 265px;
+      background: url(../img/logo-mini.png) no-repeat;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header{
+    .header-content{
+      margin: 5px 20px;
+      padding: 10px;
+      background: $primary-color;
+      border:1px solid lighten($primary-color, 4%);
+    }
+    .timezone-select, .country-filter{
+      display:block;
+      select{
+        width:90%;
+      }
+    }
+    .timezone-select{
+      margin-left:0;
+    }
+    h1 a{
+      width: 265px;
+      background: url(../img/logo-mini.png) no-repeat;
+    }
+  }
+}
+
 
 .home {
 
