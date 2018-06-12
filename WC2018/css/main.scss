@@ -31,9 +31,17 @@ body{
   background: rgba(0,0,0,0.4); // darken background - optional
   font-family: $primary-font;
   &.home{
-  // background-image:
-  //   linear-gradient(90deg, transparent 49.9%, $timeline-color 49.9%, $timeline-color 50.1%, transparent 50.1% ); //timeline line
-  background: url(../img/timeline-back.gif) center repeat-y;
+    &::before {
+      content: "";
+      display: block;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -9;
+      background: url(../img/timeline-back.gif) center repeat-y;
+    }
   }
 }
 
@@ -267,17 +275,21 @@ header{
       border:1px solid $date-color-1;
 
       h2{
-        display: grid;
-        grid-template-columns: 1fr auto;
+        display:table;
+        // display: grid;
+        // grid-template-columns: 1fr auto;
 
         span {
+          display:table-cell;
           padding: $single-margin;
+          width:160px;
         }
 
         span:nth-child(2){
           background:$grey;
           color: $black;
           text-align: right;
+          width:40px;
         }
       }
 
@@ -362,7 +374,7 @@ header{
     // }
 
     .story{
-      width:370px;
+      width:360px;
       margin: $triple-margin $single-margin;
       display:inline-block;
       vertical-align: middle;
@@ -451,7 +463,7 @@ header{
 
     .match, .result{
       // background: rgba(255,0,0,0.5);
-      width:370px;
+      width:360px;
       margin: $triple-margin $single-margin;
       display:inline-block;
       vertical-align: middle;
