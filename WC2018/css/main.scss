@@ -1280,6 +1280,24 @@ header{
   }
 }
 
+@media screen and (max-width: 375px) {
+  .home{
+    section{
+      .story, .match, .result{
+        width:340px;
+
+        h3{
+          .left, .right{
+            span{
+              width:110px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 @import 'ie';
 
 @-ms-viewport{
